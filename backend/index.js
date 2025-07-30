@@ -74,6 +74,10 @@ Important: Do not include any introduction or explanation. Just return a well-st
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ ProjectPath AI Backend is running!");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
