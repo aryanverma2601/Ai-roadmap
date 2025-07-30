@@ -33,3 +33,5 @@ coverage/
 *.env.development.local
 *.env.test.local
 *.env.production.local
+# Next.js specific
+.next/
