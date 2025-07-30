@@ -43,21 +43,30 @@ app.post("/api/generate-roadmap", async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `You are an expert product strategist and professional roadmap architect with 15+ years of experience in tech project planning, stakeholder alignment, and Agile execution.
-          Yur job is to generate the roadmap for: ${req.body.topic}.
-          And, format as JSON array, Here is the sample structure {title:"XYZ",description:"Lorem Ipsem....",id:"1",estimated_time:"14 hours"}.
-          Important Note: Kindly adhere to the JSON structure provided to you as sample structure.`,
+          content: `You are an expert product strategist and professional roadmap architect with over 15 years of experience in tech project planning, stakeholder alignment, and Agile execution.
+
+Your task is to generate a step-by-step project roadmap for the following topic: "${req.body.topic}".
+
+The output must strictly be a JSON array. Each roadmap step should follow this exact format:
+{
+  "title": "Step Title",
+  "description": "Brief explanation of the step.",
+  "id": "step_number_as_string",
+  "estimated_time": "estimated time in hours or days"
+}
+
+Important: Do not include any introduction or explanation. Just return a well-structured JSON array as described above.`,
         },
       ],
       model: "llama-3.3-70b-versatile",
     });
     let aiContent = chatCompletion.choices[0]?.message?.content;
-    console.log("Raw Response:", aiContent);
+    // console.log("Raw Response:", aiContent);
     // cleaning of aiContent because it may contain some extra characters
 
     const cleanContent = await cleanAIResponse(aiContent);
     let roadmap = JSON.parse(cleanContent);
-    console.log("Cleaned Roadmap:", roadmap);
+    // console.log("Cleaned Roadmap:", roadmap);
     res.json(roadmap);
   } catch (error) {
     console.error("Error generating roadmap:", error);
