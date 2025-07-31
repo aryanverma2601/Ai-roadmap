@@ -1,0 +1,17 @@
+authentication and authorization   
+
+session and cookies -> server always forget after sending the data toh it always authenticate for every tasks
+
+we have to learn
+1. cookies set
+    npm init
+    npm i jsonwebtoken bcrypt
+    npm i express
+2. bcrypt usage for password encryption and decryption
+    password => encrypt we use SHA256 to convert into string of unreadable
+3. JWT and how to store and extract data in JWT
+    consists of three parts
+    1. algo and token type
+    2. data ->this will be encrypted to check if we have the correct user
+    3. verify signature
+

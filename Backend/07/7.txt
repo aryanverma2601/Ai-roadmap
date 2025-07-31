@@ -1,0 +1,9 @@
+mongodb installation
+mongodb connection
+    npm init -y
+    change app.js
+    npm i express
+    npm i mongoose -> we have two servers node and mongodb server mongoose help to coneect both these
+schema 
+model
+crud

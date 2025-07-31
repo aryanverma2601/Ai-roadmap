@@ -1,0 +1,43 @@
+Dtat Storage:
+    jaha par saare user ki info store kar sakte hai
+    **database
+
+Types OF DBMS
+    SQL| NoSQL
+
+    SQL - data ko ek roop mei rakhna - tables
+    NoSQL -  mongoDB
+    contains object
+    {
+        age : 22,
+        name : aryan
+    }
+
+
+what and why 
+    in order to store data
+
+
+backend contains two server application server and database server
+
+terminology - 
+    collection - database divided into diff section
+    documents - collection ke uder kisi ek particular ka data dekhna
+    schemas ->
+    , keys, models
+
+database -> collection -> document
+
+
+CODE
+
+-------------------------------------------
+
+Code                     database
+----------------------------------------
+
+mongoose.connect -> database create
+model create     -> collection
+CREATE           -> doxument create
+
+
