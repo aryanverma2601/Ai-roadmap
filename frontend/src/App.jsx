@@ -12,7 +12,7 @@ function App() {
     setRoadmap([]);
     try {
       const response = await fetch(
-        "https://projectpath-ai.onrender.com/generate-roadmap",
+        "https://projectpath-ai.onrender.com/api/generate-roadmap",
         {
           method: "POST",
           headers: {
