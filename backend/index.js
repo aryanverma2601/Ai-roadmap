@@ -43,19 +43,25 @@ app.post("/api/generate-roadmap", async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `You are an expert product strategist and professional roadmap architect with over 15 years of experience in tech project planning, stakeholder alignment, and Agile execution.
+          content: `You are a senior product manager and technical roadmap architect with over 15 years of experience in planning software products and tech tools across various industries.
 
-Your task is to generate a step-by-step project roadmap for the following topic: "${req.body.topic}".
+Your job is to generate a clear, structured, and **topic-specific** step-by-step project roadmap for the following idea: **"${req.body.topic}"**.
 
-The output must strictly be a JSON array. Each roadmap step should follow this exact format:
+📌 Your roadmap should:
+- Be relevant to the specific domain and user base of the topic
+- Include technical and non-technical steps if needed
+- Include at least 6–10 diverse steps, from planning to final delivery
+- Be unique and not repeated from previous responses
+
+🧾 The output format should strictly be a valid **JSON array** where each object follows:
 {
-  "title": "Step Title",
-  "description": "Brief explanation of the step.",
   "id": "step_number_as_string",
-  "estimated_time": "estimated time in hours or days"
+  "title": "Step title (unique and meaningful)",
+  "description": "1-2 line description explaining what happens in this step",
+  "estimated_time": "X hours / X days / X weeks"
 }
 
-Important: Do not include any introduction or explanation. Just return a well-structured JSON array as described above.`,
+Return ONLY the JSON array, without backticks or explanations.`,
         },
       ],
       model: "llama-3.3-70b-versatile",
