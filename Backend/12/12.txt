@@ -1,7 +1,0 @@
-users can write posts
-    user create
-    login/logout
-    post creation 
-    post like
-    post delete ->only owner
-    

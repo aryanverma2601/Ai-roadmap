@@ -1,7 +1,0 @@
-//NPM understanding
-
-//installing and uninstalling anything basics and advance
-//understanding node_modules
-dependencies
-devdependencies
-//scripts - understanding default script PATH and custom scripts
